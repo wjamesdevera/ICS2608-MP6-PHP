@@ -6,10 +6,9 @@ class User {
     private $password;
     private $phoneNumber;
     private $email;
-    private $dateOfBirth;
     private $gender;
 
-    function __construct($firstName, $lastName, $studentID, $password, $phoneNumber, $email, $dateOfBirth, $gender)
+    function __construct($firstName, $lastName, $studentID, $password, $phoneNumber, $email, $gender)
     {
         $this->setFirstName($firstName);
         $this->setLastName($lastName);
@@ -17,7 +16,6 @@ class User {
         $this->setPassword($password);
         $this->setPhoneNumber($phoneNumber);
         $this->setEmail($email);
-        $this->setDateOfBirth($dateOfBirth);
         $this->setGender($gender);
     }
 
@@ -54,14 +52,6 @@ class User {
         return true;
     }
 
-    function setDateOfBirth($dateOfBirth) {
-        if(!preg_match($dateOfBirth, "^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$")) {
-            return false;
-        }
-        $this->dateOfBirth = $dateOfBirth;
-        return true;
-    }
-
     function setGender($gender) {
         if ($gender != "male" || $gender != "female" || $gender != "other") {
             return false;
@@ -93,10 +83,6 @@ class User {
 
     function getEmail() {
         return $this->email;
-    }
-
-    function getDateOfBirth() {
-        return $this->dateOfBirth;
     }
 
     function getGender() {

@@ -51,4 +51,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url("./assets/wallpaperflare.com_wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.form {
+    background-color: white;
+    width: 20rem;
+    min-height: 20rem;
 }
