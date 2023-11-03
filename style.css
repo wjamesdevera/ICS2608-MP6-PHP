@@ -280,6 +280,10 @@ select option {
     padding: .5rem;
 }
 
+.gender-buttons input[type="radio"]:not(:checked) + label:hover {
+    outline: 2px solid var(--button-primary);
+}
+
 .gender-buttons input[type="radio"]:checked + label {
     background-color: var(--button-primary);
 }
