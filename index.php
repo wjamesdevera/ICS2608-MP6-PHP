@@ -18,12 +18,12 @@ include("./templates/header.php");
                     </div>
                     <div class="gender form-section">
                         <h4>Gender</h4>
-                        <label>
-                            <input type="radio" name="gender" id="male" value="male"> Male
-                        </label>
-                        <label>
-                            <input type="radio" name="gender" id="male" value="male"> Female
-                        </label>
+                        <div class="gender-buttons">
+                            <input type="radio" name="gender" id="male" value="male" checked>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Female</label>
+                        </div>
                     </div>
                     <div class="student-id form-section">
                         <input type="text" name="student_id" id="student_id" placeholder="Student Number">
