@@ -4,17 +4,21 @@ include("./templates/header.php");
 ?>
     <div class="section sign-up">
         <div class="left-section">
-            <img src="./assets/undraw_learning_re_32qv.svg" alt="" class="sign-up-img">
+            <div class="">
+                <h1 class="hero-title">CICS Front-End Club</h1>
+                <img src="./assets/1 SCENE.svg" alt="" class="sign-up-img">
+            </div>
         </div>
         <div class="right-section">
             <form class="form" action="./register.php" method="POST">
                 <h2 class="form-title">Let's Get to Know You</h2>
                 <div class="form-content">
-                    <div class="name form-section">
+                    <div class="name form-section grid-span-2">
                         <h4>Full Name</h4>
-                        <input type="text" name="first_name" id="first_name" placeholder="First Name">
-                        <span><p><?php echo $errors['first_name'] ?></p></span>
-                        <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                        <div class="name-fields">
+                            <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                            <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                        </div>
                     </div>
                     <div class="gender form-section">
                         <h4>Gender</h4>
@@ -87,27 +91,30 @@ include("./templates/header.php");
                             </select>
                         </div>
                     </div>
-                    <div class="phone form-section">
+                    <div class="phone form-section grid-span-2">
                         <label for="phone">Mobile No.</label>
                         <input type="text" name="phone" id="phone" placeholder="Mobile Number">
                     </div>
-                    <div class="address form-section">
+                    <div class="address form-section grid-span-2">
                         <h4>Current Address</h4>
-                        <input type="text" name="street" id="street"placeholder="Street Address">
-                        <input type="text" name="city" id="city" placeholder="City or Locality">
-                        <input type="text" name="state" id="state" placeholder="State, Region, or Province">
-                        <input type="text" name="postal" id="postal" placeholder="Postal Code / ZIP Code">
-                        <select name="country" id="country">
-                            <option value="" selected disabled>Country</option>
-                            <?php 
-                            foreach($countries as $country) {
-                                echo "<option value='$country'>$country</option>";
-                            }
-                            ?>
-                        </select>
+                        <div class="address-fields">
+                            <input type="text" name="street" id="street" placeholder="Street Address">
+                            <input type="text" name="city" id="city" placeholder="City or Locality">
+                            <input type="text" name="state" id="state" placeholder="State, Region, or Province">
+                            <input type="text" name="postal" id="postal" placeholder="Postal Code / ZIP Code">
+                            <select name="country" id="country">
+                                <option value="" selected disabled>Country</option>
+                                <?php 
+                                foreach($countries as $country) {
+                                    echo "<option value='$country'>$country</option>";
+                                }
+                                ?>
+                            </select>
+
+                        </div>
                     </div>
                 </div>
-                <div class="">
+                <div class="submit-button">
                     <input type="submit" value="Sign Up" name="submit">
                 </div>
             </form>
