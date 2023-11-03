@@ -4,19 +4,20 @@ include("./templates/header.php");
 ?>
     <div class="section sign-up">
         <div class="left-section">
-            <img src="./assets/undraw_sign_up_n6im.svg" alt="" class="sign-up-img">
+            <img src="./assets/undraw_learning_re_32qv.svg" alt="" class="sign-up-img">
         </div>
-        <div class="">
+        <div class="right-section">
             <form class="form" action="./register.php" method="POST">
-                <h2 class="form-title">Student Registration Form</h2>
+                <h2 class="form-title">Let's Get to Know You</h2>
                 <div class="form-content">
                     <div class="name form-section">
+                        <h4>Full Name</h4>
                         <input type="text" name="first_name" id="first_name" placeholder="First Name">
                         <span><p><?php echo $errors['first_name'] ?></p></span>
                         <input type="text" name="last_name" id="last_name" placeholder="Last Name">
                     </div>
                     <div class="gender form-section">
-                        <h2>Gender</h2>
+                        <h4>Gender</h4>
                         <label>
                             <input type="radio" name="gender" id="male" value="male"> Male
                         </label>
@@ -53,20 +54,20 @@ include("./templates/header.php");
                         <input type="email" name="email" id="email" placeholder="Email">
                     </div>
                     <div class="dob form-section">
-                        <select name="day" id="day">
-                            <option value="" selected disabled>Day</option>
-                            <?php
-                            for ($i = 1; $i <= 31; $i++) {
-                                echo "<option value='$i'>$i</option>";
-                            }
-                            ?>
-                        </select>
                         <select name="month" id="month">
                             <option value="" selected disabled>Month</option>
                             <?php
                             foreach ($months as $key => $month) {
                                 $optionValue = $key + 1;
                                 echo "<option value='$optionValue'>$month</option>";
+                            }
+                            ?>
+                        </select>
+                        <select name="day" id="day">
+                            <option value="" selected disabled>Day</option>
+                            <?php
+                            for ($i = 1; $i <= 31; $i++) {
+                                echo "<option value='$i'>$i</option>";
                             }
                             ?>
                         </select>
@@ -83,7 +84,7 @@ include("./templates/header.php");
                         <input type="text" name="phone" id="phone" placeholder="Mobile Number">
                     </div>
                     <div class="address form-section">
-                        <input name="street" id="street"placeholder="Street Address">
+                        <input type="text" name="street" id="street"placeholder="Street Address">
                         <input type="text" name="city" id="city" placeholder="City or Locality">
                         <input type="text" name="state" id="state" placeholder="State, Region, or Province">
                         <input type="text" name="postal" id="postal" placeholder="Postal Code / ZIP Code">

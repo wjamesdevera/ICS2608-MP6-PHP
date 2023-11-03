@@ -44,9 +44,9 @@ $yearLevel = array(
 );
 
 $cicsDegreeProgam = array(
-    "Computer Science"=>"Bachelor of Science in Computer Science",
-    "Information Technology"=>"Bachelor of Science in Information Technology",
-    "Information Systems"=>"Bachelor of Science in Information Systems",
+    "Computer Science"=>"Computer Science",
+    "Information Technology"=>"Information Technology",
+    "Information Systems"=>"Information Systems",
 );
 
 $countries = array(
