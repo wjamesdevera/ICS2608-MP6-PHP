@@ -97,4 +97,76 @@
         $input = htmlspecialchars($input);
         return $input;
     }
+
+    $student =  new Student("Winfrey", "De Vera");
+    $student->setGender("Male");
+    $student->setStudentID("2022181118");
+    $student->setYearLevel("2");
+    $student->setDegree("Computer Science");
+    $student->setEmail("w.jamesdevera@gmail.com");
+    $student->setBirthDate("2002", "10", "04");
+    $student->setPhone("09658108388");
+    $student->setAddress("Pio Valenzuela Street", "Quezon City", "NCR", "1101", "Philippines");
+    include("./templates/header.php");
 ?>
+<div class="main-section">
+    <div class="info-card">
+        <h1>Account Information</h1>
+        <div class="info-section">
+            <h3>Full Name: </h3>
+            <div class="info-field">
+                <?php echo ucwords($student->getFirstName()) . " " . ucwords($student->getLastName()); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Gender: </h3>
+            <div class="">
+                <?php echo ucwords($student->getGender()); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Student No: </h3>
+            <div class="">
+                <?php echo strtoupper($student->getStudentID()); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Year Level: </h3>
+            <div class="">
+                <?php echo ucwords($student->getYearLevel()); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Academic Program: </h3>
+            <div class="">
+                <?php echo ucwords($student->getDegree()); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Email Address: </h3>
+            <div class="">
+                <?php echo $student->getEmail(); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Birth Date: </h3>
+            <div class="">
+                <?php echo $student->getBirthDate(); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Mobile No: </h3>
+            <div class="">
+                <?php echo $student->getPhone(); ?>
+            </div>
+        </div>
+        <div class="info-section">
+            <h3>Current Address: </h3>
+            <div class="">
+                <?php echo ucwords($student->getAddress()); ?>
+            </div>
+        </div>
+
+        </div>
+</div>
+<?php include("./templates/footer.php") ?>

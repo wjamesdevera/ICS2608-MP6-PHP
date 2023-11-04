@@ -325,6 +325,8 @@ input[type="submit"] {
 }
 
 
+
+
 @media (min-width: 768px) {
     .sign-up {
         flex-direction: row;
@@ -354,6 +356,8 @@ input[type="submit"] {
         font-weight: 900;
     }
 }
+
+
 
 @media (min-width: 1024px) {
     .sign-up {
@@ -419,4 +423,36 @@ input[type="submit"] {
         max-height: 100vh;
     }
 
+}
+
+.main-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.info-card h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--primary-1);
+}
+
+.info-card {
+    background-color: var(--background-light);
+    padding: 5%;
+    border-radius: 1rem;
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: .75rem;
+    border: 2px solid var(--primary-2);
+    padding: .25rem .5rem;
+    margin: .5rem;
+    overflow: hidden;
 }
