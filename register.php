@@ -98,15 +98,6 @@
         return $input;
     }
 
-    $student =  new Student("Winfrey", "De Vera");
-    $student->setGender("Male");
-    $student->setStudentID("2022181118");
-    $student->setYearLevel("2");
-    $student->setDegree("Computer Science");
-    $student->setEmail("w.jamesdevera@gmail.com");
-    $student->setBirthDate("2002", "10", "04");
-    $student->setPhone("09658108388");
-    $student->setAddress("Pio Valenzuela Street", "Quezon City", "NCR", "1101", "Philippines");
     include("./templates/header.php");
 ?>
 <div class="main-section">
