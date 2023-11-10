@@ -8,7 +8,10 @@
             $errors['first_name'] = "Please fill in the text field before submitting the form.";
             header("Location: index.php");
             exit();
-        } else {
+        } else if(!preg_match('/^[a-zA-Z\s]+$/', $_POST['first_name'])){ // Checks if input is letters of spaces only
+            header("Location: index.php");
+            exit();
+		} else {
             $first_name = sanitizeInput($_POST['first_name']);
         }
 
@@ -16,7 +19,10 @@
             $errors['last_name'] = "Please fill in the text field before submitting the form.";
             header("Location: index.php");
             exit();
-        } else {
+        } else if(!preg_match('/^[a-zA-Z\s]+$/', $_POST['last_name'])){ // Checks if input is letters of spaces only
+            header("Location: index.php");
+            exit();
+        } else { 
             $last_name = sanitizeInput($_POST['last_name']);
         }
 
@@ -60,7 +66,10 @@
             $errors['email'] = "Please fill in the text field before submitting the form.";
             header("Location: index.php");
             exit();
-        } else {
+        } else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+            header("Location: index.php");
+            exit();
+		} else {
             $student->setEmail(sanitizeInput($_POST['email']));
         }
 
